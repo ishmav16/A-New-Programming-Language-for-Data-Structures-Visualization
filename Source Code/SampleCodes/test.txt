@@ -1,0 +1,6 @@
+Create Stack int S;
+S.insert(2);
+for(i in range 4){
+S.insert(i);
+};
+S.delete();

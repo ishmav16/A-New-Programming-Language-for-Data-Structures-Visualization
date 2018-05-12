@@ -1,0 +1,5 @@
+a = 1;
+b = 2;
+Create Array int A[3];
+A.append(a);
+A.append(b);

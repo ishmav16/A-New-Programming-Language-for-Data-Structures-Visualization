@@ -1,0 +1,27 @@
+# Array Part
+Create Array int A1[5];
+Create Array float A2[6];
+Create Array string A3[7];
+Create Array int A4[5];
+for(i in range 5){
+  A1.append(i);
+};
+A2[1]=4.52;
+# Queue Part
+Create Queue int Q1;
+Create Queue float Q2;
+Create Queue string Q3;
+Create Queue float Q4;
+
+for(i in range 2){
+Q1.insert(2);
+};
+
+# Stack Part
+Create Stack int S1;
+Create Stack float S2;
+Create Stack string S3;
+Create Stack float S4;
+
+S1.insert(6565);
+S4.insert(223.33);

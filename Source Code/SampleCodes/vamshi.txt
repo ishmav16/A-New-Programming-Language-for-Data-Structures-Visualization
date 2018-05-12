@@ -1,0 +1,20 @@
+Create Array string a[9];
+Create Array int b[9];
+a.append(Nag);
+a.append(is);
+a.append(cool);
+b[0] = 1;
+b[1] = 4;
+b[2] = 3;
+Create Queue int s1;
+for( i in range 2)
+{
+s1.insert(i);
+};
+Create Queue float s2;
+s2.insert(1.1);
+s2.insert(2.2);
+Create Queue string s3;
+s3.insert(A);
+s3.insert(B);
+s2.erase();

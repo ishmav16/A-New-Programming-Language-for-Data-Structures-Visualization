@@ -1,0 +1,11 @@
+a = 100;
+b = 25;
+if (a > b){
+  c = 1;
+};
+else {
+  c = 0;
+};
+prints a;
+prints b;
+prints c;

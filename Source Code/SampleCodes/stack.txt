@@ -1,0 +1,24 @@
+Create Stack int S1;
+Create Stack float S2;
+Create Stack string S3;
+
+
+for(i in range 5){
+  S1.insert(i);
+};
+
+S1.delete();
+
+S2.insert(1.1);
+S2.insert(2.2);
+S2.insert(3.3);
+S2.insert(4.4);
+S2.insert(5.5);
+S2.delete();
+S2.delete();
+
+S3.insert(Life);
+S3.insert(is);
+S3.insert(Painful);
+S3.delete();
+S3.insert(Beautiful);

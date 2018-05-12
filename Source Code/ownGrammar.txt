@@ -1,0 +1,92 @@
+statement : start
+start : declaration start
+      | operations start
+      | expression SEMICO start
+      | IF condition SEMICO start
+      | IF  conditione SEMICO start
+      | FOR conditionw SEMICO start
+      | PRINTS something SEMICO start
+      | empty
+something : ID
+          | STRI PLUS ID
+          | STRI
+conditionw : LPARS expressionz RPARS LSBS operations RSBS
+expressionz : ID IN RANGE NUMBER
+empty :
+conditione : LPARS expression RPARS LSBS start1 RSBS SEMICO ELSE LSBS start2 RSBS
+condition : LPARS expression RPARS LSBS start1 RSBS
+  				| LPARS expression RPARS LSBS IF conditionz SEMICO RSBS
+conditionz : LPARS expression RPARS LSBS start1 RSBS
+    start1 : expressiona SEMICO start1
+           | empty
+declaration : CREATE ds dt ID SEMICO
+           | CREATE ds ID SEMICO
+           | CREATE ds dt ID OSB NUMBER CSB SEMICO
+start2 : expressionb SEMICO start2
+        | empty
+operations : ID oper  SEMICO
+           | ID OSB NUMBER CSB EQUAL NUMBER SEMICO
+           | ID OSB NUMBER CSB EQUAL FLOAT SEMICO
+           | ID OSB NUMBER CSB EQUAL STRI SEMICO
+  oper : INSER LPARS NUMBER RPARS
+       | INSER LPARS ID RPARS
+       | INSER LPARS NUMBER COMMA NUMBER RPARS
+       | INSER LPARS NUMBER COMMA ID RPARS
+       | DELET LPARS RPARS
+       | DELET LPARS NUMBER RPARS
+       | ERASE LPARS RPARS
+       | INSER LPARS FLOAT RPARS
+       | INSER LPARS NUMBER COMMA FLOAT RPARS
+       | DELET LPARS FLOAT RPARS
+       | APPEND LPARS NUMBER RPARS
+       | APPEND LPARS ID RPARS
+   		 | APPEND LPARS FLOAT RPARS
+
+ ds : DSQ
+   | DSS
+   | DSL
+   | ARRAY
+dt : DTI
+  | DTF
+  | DTS
+expression : expression PLUS term
+expression : expression MINUS term
+expression : term
+term : term MULT factor
+term : term DIVI factor
+term : factor
+factor : ID
+factor : NUMBER
+      | FLOAT
+term : ID EQUAL factor
+      | ID EQUAL factor PLUS factor
+      | factor EE factor
+      | factor GG factor
+      | factor LL factor
+      | factor LE factor
+      | factor GE factor
+factor : LPARS expression RPARS SEMICO
+expressiona : expressiona PLUS terma
+expressiona : expressiona MINUS terma
+expressiona : terma
+terma : terma MULT factora
+terma : terma DIVI factora
+terma : factora
+factora : ID
+factora : NUMBER
+         | FLOAT
+   terma : ID EQUAL factora
+         | ID EQUAL factora PLUS factora
+factora : LPARS expressiona RPARS SEMICO
+expressionb : expressionb PLUS termb
+expressionb : expressionb MINUS termb
+expressionb : termb
+termb : termb MULT factorb
+termb : termb DIVI factorb
+termb : factorb
+factorb : ID
+factorb : NUMBER
+        | FLOAT
+ termb : ID EQUAL factorb
+    		| ID EQUAL factorb PLUS factorb
+factorb : LPARS expressionb RPARS SEMICO

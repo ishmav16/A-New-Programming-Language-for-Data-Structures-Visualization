@@ -1,0 +1,19 @@
+Create Array int A1[5];
+Create Array string A2[7];
+for(i in range 5){
+  A1.append(i);
+};
+A2[0]="CD";
+A2[1]="Project";
+Create Queue float Q1;
+Create Queue string Q3;
+Q1.insert(2.2);
+Q3.insert(Life);
+Q3.insert(is);
+Q3.insert(beautiful);
+Q3.delete();
+Q1.erase();
+Create Stack float S1;
+S1.insert(6565.55);
+S1.insert(222.10);
+S1.delete();
